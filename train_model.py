@@ -33,7 +33,7 @@ def main():
                       'charging_cycles', 'vehicle_age', 'avg_speed',
                       'terrain_type', 'driving_style']
 
-    X = df_encoded[feature_columns]
+    X = df_encoded[feature_columns].astype('float32')
     y = df_encoded['range_km']
 
     X_train, X_test, y_train, y_test = preprocessor.prepare_data_for_modeling(
